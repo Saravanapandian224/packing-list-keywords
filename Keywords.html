@@ -1,50 +1,49 @@
 General Information:
-Exporter Name: Look for the name of the company that created the packing list.
-Customer Code: Keywords to search: "Customs Code," "Customs No.," "Custom Code," "Ship To Customer No:".
-Packing List No: Keywords to search: "Packing List Number:", "Packing List No:", "PL No:", "P/I No.", "Packing List No. :".
-Delivery Number: Keywords to search: "Delivery," "Delivery No.," "Delivery Number," "Delivery Order," "Delivery Nr".
-Shipment Number: Keywords to search: "Shipment No.," "Shipment Details," "Shipment Number," "Shipping #:", "Shipment Number:".
-Purchase Order No: Keywords to search: "PURCHASE ORDER:", "CUSTOMER PO NO," "Customer P.O.:," "Purchase Order Number:", "P.O.#:".
-Reference No: Keywords to search: "Reference No.," "Customer Receipt Ref Nr:", "Reference Movianto," "Ref.-code," "Customer Ref. No.," "Ref. No.," "Reference".
-HS Code: Keywords to search: "Tariff Number," "Customs tariff no," "customs tariff," "hts," "commodity code," "HS class," "customs code," "Customs tariff no.," "harmonized schedule number," "tariff code," "hs," "tariff," "h. schedule," "h. schedule code," "h. schedule number," "tariff schedule number," "tariff / commodity," "hs code," "hsn code".
-Exclude contexts: "ORDER NO.:," "UAPL," "Material Code," "MATERIAL NO.:".
-Consignee Name: - Search for keywords like "SHIP TO:", "DeliveryAddress", "CONSIGNEE'S NAME & ADDRESS:", etc. If not found, consider "Bill to:" as a secondary option.
-Consignee Address: - Retrieve the full address from using the same keywords as for the consignee's name.
-Invoice Number: Keywords to search: "Invoice No.," "N°," "INVOICE NO.:," "No.".
-Invoice Date: Keywords to search: "Pack Date," "Print Date and Time:," "Ship Date:," "DATE," "Shipment Date:," "inv date:," "Date:," "Voucher-no./Date," "DATE:," "ORDER DATE:," "ship date:," "Invoice date:," "shipment date:". Convert to format dd/mm/yyyy if found.
-Country of Origin: Keywords to search: "origin," "ORG," "manufacturing country," "Origin," "country of origin," "COO," "country of," "cntry," "country," "manufacturing," "uom origin".
-Destination Country: Look for the final destination country.
-Item Sales Order No: Keywords to search: "Sales Order No.," "Sales Order," "SO No".
-No of Packing: Keywords to search: "Number of brackets," "number of packages:," "Number of pallets," "Number/Packing unit".
-Packing Unit: Look for unit terms like "CS," "Box," "PLT," "Pieces," "EWP3 (Inka)," "Parcels".
-Total Gross Weight: Keywords to search: "Total Weight:," "Total Gross Wt KG," "Gross Weight," "G.W(KGS)," "G.W.," "GROSS WT.," "Gross weight/kgs," "Total Gross Weight".
-Total Gross Weight Unit: Look for weight units like "KG," "EWP3 (Inka)," "Box," "(KGS)," "G," "LB," "kgs".
-Total Net Weight: Keywords to search: "Net Weight(KG)," "Net Weight," "Nett Weight," "N.W(KGS)," "Total Net Wt KG," "Net Wt(Kg)," "Net weight/kgs," "Total Net Weight:," "NET WEIGHT (KG)," "Net Weight:," "NET WT.(KG)," "N.W.".
-Total Net Weight Unit: Look for weight units like "KG," "G," "LB," "OZ". 
+ "Exporter Name": "Look for the name of the company that created the packing list.",
+"Customer Code": ["Customs Code", "Customs No.", "Custom Code", "Ship To Customer No:"],
+"Packing List No": ["Packing List Number:", "Packing List No:", "PL No:", "P/I No.", "Packing List No. :"],
+"Delivery Number": ["Delivery", "Delivery No.", "Delivery Number", "Delivery Order", "Delivery Nr"],
+"Shipment Number": ["Shipment No.", "Shipment Details", "Shipment Number", "Shipping #:", "Shipment Number:"],
+"Purchase Order No": ["PURCHASE ORDER:", "CUSTOMER PO NO", "Customer P.O.:", "Purchase Order Number:", "P.O.#:"],
+"Reference No": ["Reference No.", "Customer Receipt Ref Nr:", "Reference Movianto", "Ref.-code", "Customer Ref. No.", "Ref. No.", "Reference"],
+"HS Code": ["Tariff Number", "Customs tariff no", "customs tariff", "hts", "commodity code", "HS class", "customs code", "Customs tariff no.", "harmonized schedule number", "tariff code", "hs", "tariff", "h. schedule", "h. schedule code", "h. schedule number", "tariff schedule number", "tariff / commodity", "hs code", "hsn code"],
+"Consignee Name": ["SHIP TO:", "DeliveryAddress", "CONSIGNEE'S NAME & ADDRESS:", "Bill to:"],
+"Consignee Address": ["SHIP TO:", "DeliveryAddress", "CONSIGNEE'S NAME & ADDRESS:", "Bill to:"],
+"Invoice Number": ["Invoice No.", "N°", "INVOICE NO.:", "No."],
+"Invoice Date": ["Pack Date", "Print Date and Time:", "Ship Date:", "DATE", "Shipment Date:", "inv date:", "Date:", "Voucher-no./Date", "DATE:", "ORDER DATE:", "ship date:", "Invoice date:", "shipment date:"],
+"Country of Origin": ["origin", "ORG", "manufacturing country", "Origin", "country of origin", "COO", "country of", "cntry", "country", "manufacturing", "uom origin"],
+"Destination Country": "Look for the final destination country.",
+"Item Sales Order No": ["Sales Order No.", "Sales Order", "SO No"],
+"No of Packing": ["Number of brackets", "number of packages:", "Number of pallets", "Number/Packing unit"],
+"Packing Unit": ["CS", "Box", "PLT", "Pieces", "EWP3 (Inka)", "Parcels"],
+"Total Gross Weight": ["Total Weight:", "Total Gross Wt KG", "Gross Weight", "G.W(KGS)", "G.W.", "GROSS WT.", "Gross weight/kgs", "Total Gross Weight"],
+"Total Gross Weight Unit": ["KG", "EWP3 (Inka)", "Box", "(KGS)", "G", "LB", "kgs"],
+"Total Net Weight": ["Net Weight(KG)", "Net Weight", "Nett Weight", "N.W(KGS)", "Total Net Wt KG", "Net Wt(Kg)", "Net weight/kgs", "Total Net Weight:", "NET WEIGHT (KG)", "Net Weight:", "NET WT.(KG)", "N.W."],
+"Total Net Weight Unit": ["KG", "G", "LB", "OZ"]
 
 Table Fields:
-Item HS Code: Extract using 'Tariff Number,' 'Customs tariff no,' 'customs tariff,' 'hts,' 'commodity code,' 'HS class,' 'customs code,' 'Customs tariff no.,' 'harmonized schedule number,' 'tariff code,' 'hs,' 'tariff,' 'h. schedule,' 'h. schedule code,' 'h. schedule number,' 'tariff schedule number,' 'tariff / commodity,' 'hs code,' 'hsn code'. Exclude 'ORDER NO.:,' 'UAPL,' 'Material Code,' 'MATERIAL NO.:'.
-Item Material Code: Detect using 'material no.,' 'Material Number,' 'Material Code,' 'MATERIAL CODE,' 'Material No.'.
-Item Packing List No: Identify using 'Packing List Number:,' 'Packing List No:,' 'PL No:,' 'Packing List No. :'.
-Item Product Code: Extract using 'PRODUCT CODE' or similar indicators.
-Item Customer Code: Identify using 'Customer Code'.
-Item Reference No.: Identify using 'Customer Reference,' 'Our reference,' 'Ref. No.,' 'Reference,' 'REF:'.
-Item Number: Detect using 'Item Code', 'Item/Customer Code', 'Item No.', 'Item'.
-Item Order Number: Identify using 'Customer PO', 'Order No.', 'Your order', 'Your order no.', 'Order Number'.
-Item Model Number: Identify using 'Model No.,' 'Model Number'.
-Item Purchase Order No: Locate using 'Purchase order', 'PURCHASE ORDER:', 'CUSTOMER PO NO', 'Customer P.O.:', 'Purchase Order Number:'.
-Item Delivery Number: Identify using 'Delivery', 'Delivery No.', 'Delivery Number', 'Delivery Order', 'Delivery Nr'.
-Item Description: Extract from 'Description,' 'Item Description,' 'Designation,' 'PRODUCT DESCRIPTION,' 'Material / Description,' 'Customs Tariff Description,' 'HTS Description,' 'Commodity,' 'Commodity Code Description,' 'Customs Code Description,' 'Harmonized Schedule Number Description,' 'Tariff Code Description,' 'HS Description,' 'Tariff Description,' 'H. Schedule Description,' 'H. Schedule Code Description,' 'DESCRIPTION OF GOODS,' 'H. Schedule Number Description,' 'Tariff Schedule Number Description,' 'Tariff / Commodity Description,' 'HS Code Description,' 'Invoice Description,' 'Description/Type of Goods'.
-Item HS Quantity: Identify using 'Item,' 'Disc.Quantity,' 'QUANTITIES,' 'HS Quantity,' 'Delivered Qty,' 'Quantity Shipped,' 'Quantity,' 'Qty,' 'Description'. Exclude 'CTN' in HS Quantity.
-Item HS Quantity Unit: Capture unit like 'PC,' 'PCS,' 'SET,' 'BOX,' 'KG'.
-Item No of Packing: Extract using 'PACKAGES,' 'Packaging Units'.
-Item Packing Unit: Determine unit like 'CARTONS,' 'KPK'.
-Item Country of Origin: Extract using 'Origin,' 'ORG,' 'manufacturing country,' 'origin,' 'country of origin,' 'coo,' 'country of,' 'cntry,' 'country,' 'UOM,' 'manufacturing,' 'uom origin'.
-Item Part Number: Identify using 'Part No.,' 'HP Part Number,' 'Part Number'.
-Item Sales Number: Identify using 'Sales No.,' 'Sales Number,' 'SL No'.
-Item Serial Number: Identify using 'Box,' 'Batch/Serial#,' 'Line,' 'Line No,' 'Serial No.,' 'Serial Number,' 'SI.No'.
-Item Sales Order No: Identify using 'Sales Order No.,' 'Sales Order,' 'SO No'.
-Item Gross Weight: Search using 'Gross Wt. KGs,' 'Gross weight/kgs,' 'G.W.,' 'Gross Weight,' 'GW,' 'G/W (KG),' 'WEIGHT(Kg)'.
-Item Gross Weight Unit: Capture unit like 'KG,' 'G'.
-Item Net Weight: Search using 'NetWeight', 'Net Weight(KG),' 'Net Wt. KGs,' 'Net Wght(Kg),' 'Net Weight:,' 'Net weight/kgs,' 'Total Net Weight:,' 'Net Weight,' 'NET WEIGHT (KG),' 'Net Weight:.,' 'NW,' 'NET WT.(KG),' 'N.W(KGS),' 'Nett Weight,' 'Weight(s)'.
-Item Net Weight Unit: Capture unit like 'KG,' 'G,' 'LB,' 'OZ'.
+"Item HS Code": ["Tariff Number", "Customs tariff no", "customs tariff", "hts", "commodity code", "HS class", "customs code", "Customs tariff no.", "harmonized schedule number", "tariff code", "hs", "tariff", "h. schedule", "h. schedule code", "h. schedule number", "tariff schedule number", "tariff / commodity", "hs code", "hsn code"],
+"Item Material Code": ["material no.", "Material Number", "Material Code", "MATERIAL CODE", "Material No."],
+"Item Packing List No": ["Packing List Number:", "Packing List No:", "PL No:", "Packing List No. :"],
+"Item Product Code": ["PRODUCT CODE"],
+"Item Customs Code": ["Customer Code"],
+"Item Reference No.": ["Customer Reference", "Our reference", "Ref. No.", "Reference", "REF:"],
+"Item Number": ["Item Code", "Item/Customer Code", "Item No.", "Item"],
+"Item Order Number": ["Customer PO", "Order No.", "Your order", "Your order no.", "Order Number"],
+"Item Model Number": ["Model No.", "Model Number"],
+"Item Purchase Order No": ["Purchase order", "PURCHASE ORDER:", "CUSTOMER PO NO", "Customer P.O.:", "Purchase Order Number:", "P.O.#:"],
+"Item Delivery Number": ["Delivery", "Delivery No.", "Delivery Number", "Delivery Order", "Delivery Nr"],
+"Item Description": ["Description", "Item Description", "Designation", "PRODUCT DESCRIPTION", "Material / Description", "Customs Tariff Description", "HTS Description", "Commodity", "Commodity Code Description", "Customs Code Description", "Item Harmonized Schedule Number Description", "Tariff Code Description", "HS Description", "Tariff Description", "H. Schedule Description", "H. Schedule Code Description", "DESCRIPTION OF GOODS", "H. Schedule Number Description", "Tariff Schedule Number Description", "Tariff / Commodity Description", "HS Code Description", "Invoice Description", "Description/Type of Goods"],
+"Item HS Quantity": ["Item", "Disc.Quantity", "QUANTITIES", "HS Quantity", "Delivered Qty", "Quantity Shipped", "Quantity", "Qty"],
+"Item HS Quantity Unit": ["PCE", "PCS", "EA", "SET", "TUBE", "OZ", "SYR", "KG", "MTK", "MTR", "M2", "LTR", "NUM", "PRS", "PR", "TPR", "CEN", "MIL", "TNE", "KGM", "Pieces", "GM"],
+"Item No of Packing": ["PACKAGES", "Packaging Units"],
+"Item Packing Unit": ["CARTONS", "KPK"],
+"Item Country of Origin": ["Origin", "ORG", "manufacturing country", "origin", "country of origin", "coo", "COO", "country of", "cntry", "country", "manufacturing", "uom origin"],
+"Item Part Number": ["Part No.", "Part Number"],
+"Item Sales Number": ["Sales No.", "Sales Number", "SL No"],
+"Item Serial Number": ["Box", "Batch/Serial#", "Line", "Line No", "Serial No.", "Serial Number", "SI.No"],
+"Item Sales Order No": ["Sales Order No.", "Sales Order", "SO No"],
+"Item Gross Weight": ["Gross Wt. KGs", "Gross weight/kgs", "G.W.", "Gross Weight", "GW", "G/W (KG)", "WEIGHT(Kg)"],
+"Item Gross Weight Unit": ["KG", "G"],
+"Item Net Weight": ["Net Wt. KGs", "Net Wght(Kg)", "Net Weight:", "Net weight/kgs", "Total Net Weight:", "Net Weight", "NET WEIGHT (KG)", "Net Weight:.", "NW", "Net Weight(KG)", "NET WT.(KG)", "N.W(KGS)", "Nett Weight", "N.W."],
+"Item Net Weight Unit": ["KG", "G", "LB", "OZ"]
